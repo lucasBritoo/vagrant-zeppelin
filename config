@@ -1,0 +1,12 @@
+Host teste-zeppelin
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /home/brito/Documents/2rpnet/desafio2-vagrant/id_rsa_slave
+  IdentityFile /home/brito/.vagrant.d/insecure_private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
