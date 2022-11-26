@@ -54,7 +54,7 @@ Toda a documentação que foi consultada durante o desenvolvimento está referen
 -   [externo] https://phoenixnap.com/kb/how-to-install-java-centos-8
 
 - `Instalação Zeppelin`: <br>
--   [oficial] https://zeppelin.apache.org/docs/latest/quickstart/install.html <br>
+-   [oficial] https://zeppelin.apache.org/docs/0.10.1/quickstart/install.html <br>
 -   [externo] https://www.vultr.com/pt/docs/how-to-install-apache-zeppelin-on-centos-7/
 
 - `Manusear txt com Python`: <br>
