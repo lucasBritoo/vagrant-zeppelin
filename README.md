@@ -7,7 +7,7 @@ Desafio para testar os conhecimentos sobre Vagrant + Zeppelin + Pyhon
 - `Funcionalidade 1`: ✔️ Criar um script Vagrant que suba uma máquina CentOS 7.x com 2 CPUs (2 cores de processador), 4 GB de memória RAM e 50gb de HD chamada “teste-zeppelin”;
 - `Funcionalidade 2`: ✔️ O acesso a VM deve ser através de uma chave privada, não com senha;
 - `Funcionalidade 3`: ✔️ Criar um programa em python que faça a instalação do Java e do Apache Zeppelin nessa máquina recém criada;
-- `Funcionalidade 4`:     O programa deve subir o webserver do Zeppelin na porta 8888;
+- `Funcionalidade 4`: ✔️ O programa deve subir o webserver do Zeppelin na porta 8888;
 - `Funcionalidade 5`: ✔️ Criar usuários a partir da lista presente no arquivo 'Lista_Usuarios_Zeppelin.txt'.
 
 ## ⚙ Ambiente de desenvolvimento
@@ -26,12 +26,12 @@ $ vagrant plugin install vagrant-disksize
 
 ## 🔒 SSH
 
-Para a configuração do ssh é necessário gerar novas chaves. Os comandos abaixo vão gerar novas chaves ssh para nossa conexão:
+Para a configuração do ssh é necessário gerar novas chaves. O nome da chave gerada é 'id_rsa_slave' e ela precisa estar no mesmo diretório do 'vagrantfile'. Os comandos abaixo vão gerar novas chaves ssh para nossa conexão:
 
 ```
-$ ssh-keygen -t rsa -b 4096 -C "vagrant"
+$ ssh-keygen -t rsa -b 4096 -C "id_rsa_slave"
 $ eval $(ssh-agent) 
-$ ssh-add ./id_rsa
+$ ssh-add ./id_rsa_slave
 ```
 
 Para se conectar, basta digitar:
@@ -41,7 +41,7 @@ $ ssh teste-zeppelin
 ```
 É essencial que as chaves estejam no mesmo diretório do 'Vagrantfile', pois a chave pública será inserida dentro da VM ao iniciar o processo.
 
-Há um arquivo de configuração chamado 'ssh.config' que contém os parâmetros de conexão ssh (IP, user, port, key). Este arquivo já está configurado com as configurações estáticas para o ambiente de desenvolvimento. 
+Há um arquivo de configuração chamado 'ssh.config' que contém os parâmetros de conexão ssh (IP, user, port, key). Este arquivo já está configurado com as configurações estáticas para o ambiente de desenvolvimento.
 
 
 ## 🔀 Python
