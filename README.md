@@ -34,9 +34,10 @@ $ eval $(ssh-agent)
 $ ssh-add ./id_rsa_slave
 ```
 
-Para se conectar, basta digitar:
+Para se conectar é necessário copiar o arquivo 'config' para ~/.ssh/. Depois a conexão será estabelecida usando o arquivo config_ssh:
 
 ```
+$ cp ./config ~/.ssh/
 $ ssh teste-zeppelin
 ```
 É essencial que as chaves estejam no mesmo diretório do 'Vagrantfile', pois a chave pública será inserida dentro da VM ao iniciar o processo.
